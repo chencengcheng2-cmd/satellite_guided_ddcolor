@@ -170,18 +170,24 @@ and outputs:
 
 ## Checkpoints
 
-Trained weights are not committed to Git because `.pth` files are large. Put checkpoints under:
+The trained checkpoint is stored with Git LFS:
 
 ```text
-checkpoints/<experiment>/best.pth
+checkpoints/film_ddcolor_cu130_20260527/best.pth
 ```
 
-Recommended ways to share weights:
+Install Git LFS before cloning or pulling the checkpoint:
 
-- GitHub Release asset
-- Hugging Face model repository
-- Git LFS, if quota is available
-- cloud drive link
+```powershell
+git lfs install
+git clone https://github.com/chencengcheng2-cmd/satellite_guided_ddcolor.git
+```
+
+If the repository has already been cloned without LFS objects, run:
+
+```powershell
+git lfs pull
+```
 
 ## Results From Local Run
 

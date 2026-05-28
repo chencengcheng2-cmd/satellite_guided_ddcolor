@@ -1,16 +1,14 @@
 # Checkpoints
 
-Model checkpoints are not tracked in Git because they are large binary artifacts.
-
-Place trained weights here, for example:
+The trained `best.pth` checkpoint is tracked with Git LFS:
 
 ```text
 checkpoints/film_ddcolor_cu130_20260527/best.pth
 ```
 
-Recommended release options:
+Install Git LFS before cloning or pulling:
 
-- GitHub Release asset
-- Hugging Face model repository
-- cloud drive / institutional storage
-- Git LFS, if quota is available
+```powershell
+git lfs install
+git lfs pull
+```
