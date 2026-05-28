@@ -1,0 +1,51 @@
+# Configuration file for Satellite-Guided DDColor
+
+# Dataset paths
+dataset:
+  root: "C:/Users/31133/Desktop/dataset1/CVUSA_processed_split"
+
+# Training configuration
+training:
+  batch_size: 4
+  epochs: 30
+  lr: 0.0001
+  weight_decay: 0.0001
+  min_lr: 0.000001
+  num_workers: 0  # Windows compatibility
+  use_amp: true
+  log_interval: 50
+  save_interval: 1
+  seed: 42
+
+# Model configuration
+model:
+  context_dim: 512
+  polar_encoder_pretrained: true
+  correction_type: "light"  # 'resnet' or 'light'
+  residual_scale: 0.1
+  polar_input_size: [256, 512]
+  use_film: true
+
+# DDColor configuration
+ddcolor:
+  weights_path: "C:/Users/31133/Desktop/ddcolor/DDColor-master/weights_hf/ddcolor_paper_tiny/pytorch_model.bin"
+  code_path: "C:/Users/31133/Desktop/ddcolor/DDColor-master"
+  input_size: 256
+
+# Loss configuration
+loss:
+  l1_weight: 1.0
+  perceptual_weight: 0.5
+  residual_weight: 0.1
+  use_perceptual: true
+
+# Paths
+paths:
+  checkpoint_base_dir: "checkpoints"
+  output_base_dir: "outputs"
+
+# Gradio configuration
+gradio:
+  server_name: "0.0.0.0"
+  server_port: 7860
+  share: false

@@ -1,0 +1,52 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local configs and secrets
+config.yaml
+*.local.yaml
+.env
+
+# Datasets and third-party checkouts
+data/
+dataset/
+datasets/
+CVUSA_processed_split/
+third_party/DDColor/*
+!third_party/DDColor/README.md
+!third_party/DDColor/.gitkeep
+
+# Training artifacts
+checkpoints/*
+!checkpoints/README.md
+!checkpoints/.gitkeep
+outputs/*
+!outputs/README.md
+!outputs/.gitkeep
+
+# Large ML artifacts
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.onnx
+
+# Logs
+*.log
+logs/
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
