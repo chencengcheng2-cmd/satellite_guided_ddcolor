@@ -86,6 +86,33 @@ Verify CUDA:
 .\.venv\Scripts\python.exe -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda.get_arch_list(), torch.cuda.get_device_name(0))"
 ```
 
+## DDColor Requirement
+
+This repository does not bundle the official DDColor source code or the original DDColor pretrained weights. Before running training, evaluation, inference, or the Gradio UI, download both:
+
+1. Official DDColor code repository
+2. `ddcolor_paper_tiny` pretrained weight file
+
+Expected DDColor files:
+
+```text
+PATH/TO/DDColor/
+  ddcolor/
+  weights_hf/
+    ddcolor_paper_tiny/
+      pytorch_model.bin
+```
+
+Then set these paths in `config.yaml`:
+
+```yaml
+ddcolor:
+  code_path: "PATH/TO/DDColor"
+  weights_path: "PATH/TO/DDColor/weights_hf/ddcolor_paper_tiny/pytorch_model.bin"
+```
+
+DDColor is loaded locally and kept frozen. The project does not use Hugging Face online inference.
+
 ## Configuration
 
 Copy the example config and edit paths:

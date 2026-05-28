@@ -1,8 +1,20 @@
-# DDColor
+# DDColor Requirement
 
-Put the official DDColor repository or a symlink here if desired.
+This project requires the official DDColor code and the `ddcolor_paper_tiny` pretrained weights.
 
-The project also supports an external DDColor path through `config.yaml`:
+They are not bundled in this repository. Download them separately, then either place the official DDColor repository here or point `config.yaml` to an external location.
+
+Expected files:
+
+```text
+PATH/TO/DDColor/
+  ddcolor/
+  weights_hf/
+    ddcolor_paper_tiny/
+      pytorch_model.bin
+```
+
+Configure:
 
 ```yaml
 ddcolor:
@@ -10,4 +22,4 @@ ddcolor:
   weights_path: "PATH/TO/DDColor/weights_hf/ddcolor_paper_tiny/pytorch_model.bin"
 ```
 
-DDColor weights and source checkout are not bundled in this repository.
+DDColor is used only as a frozen local model. It is not trained or fine-tuned by this project.
