@@ -30,6 +30,8 @@ third_party/DDColor/*
 checkpoints/*
 !checkpoints/README.md
 !checkpoints/.gitkeep
+!checkpoints/film_ddcolor_cu130_20260527/
+!checkpoints/film_ddcolor_cu130_20260527/best.pth
 outputs/*
 !outputs/README.md
 !outputs/.gitkeep
@@ -40,6 +42,7 @@ outputs/*
 *.ckpt
 *.safetensors
 *.onnx
+!checkpoints/film_ddcolor_cu130_20260527/best.pth
 
 # Logs
 *.log
